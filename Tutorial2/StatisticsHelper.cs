@@ -9,7 +9,11 @@ public class StatisticsHelper
 		while (true) {
 			Console.WriteLine("Enter numbers separated by space: ");
 			line = Console.ReadLine();
-			numbers = line.Split(' ').Select(int.Parse).ToArray();
+			if (string.IsNullOrWhiteSpace(line)) {
+				Console.WriteLine("Invalid input detected");
+				continue;
+			}
+			numbers = line.Trim().Split(' ').Select(int.Parse).ToArray();
 			Console.WriteLine(string.Join(", ", numbers));
 		}
 	}
