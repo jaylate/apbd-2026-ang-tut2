@@ -4,10 +4,13 @@ public class StatisticsHelper
 {
 	public static int Main(string[] args)
 	{
-		string line;
-		while ((line = Console.ReadLine()) != null) {
-			Console.WriteLine(line);
+		string? line;
+		int[]? numbers;
+		while (true) {
+			Console.WriteLine("Enter numbers separated by space: ");
+			line = Console.ReadLine();
+			numbers = line.Split(' ').Select(int.Parse).ToArray();
+			Console.WriteLine(string.Join(", ", numbers));
 		}
-		return 0;
 	}
 }
