@@ -11,6 +11,12 @@ public class StatisticsHelper
 	{
 		return values.Max();
 	}
+
+	static double CalculateMin(int[] values)
+	{
+		return values.Min();
+	}
+
 	public static int Main(string[] args)
 	{
 		string? line;
