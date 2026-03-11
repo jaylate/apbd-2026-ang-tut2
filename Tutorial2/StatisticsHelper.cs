@@ -32,6 +32,7 @@ public class StatisticsHelper
 			Console.WriteLine(string.Join(", ", numbers));
 			Console.WriteLine("Average: " + CalculateAverage(numbers));
 			Console.WriteLine("Max: " + CalculateMax(numbers));
+			Console.WriteLine("Min: " + CalculateMin(numbers));
 		}
 	}
 }
