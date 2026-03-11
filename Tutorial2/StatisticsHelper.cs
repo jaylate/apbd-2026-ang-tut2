@@ -6,6 +6,11 @@ public class StatisticsHelper
 	{
 		return values.Average();
 	}
+
+	static double CalculateMax(int[] values)
+	{
+		return values.Max();
+	}
 	public static int Main(string[] args)
 	{
 		string? line;
@@ -20,6 +25,7 @@ public class StatisticsHelper
 			numbers = line.Trim().Split(' ').Select(int.Parse).ToArray();
 			Console.WriteLine(string.Join(", ", numbers));
 			Console.WriteLine("Average: " + CalculateAverage(numbers));
+			Console.WriteLine("Max: " + CalculateMax(numbers));
 		}
 	}
 }
