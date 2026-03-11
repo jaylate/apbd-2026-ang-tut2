@@ -29,7 +29,7 @@ public class StatisticsHelper
 				continue;
 			}
 			numbers = line.Trim().Split(' ').Select(int.Parse).ToArray();
-			Console.WriteLine(string.Join(", ", numbers));
+			Console.WriteLine(string.Join(" ", numbers));
 			Console.WriteLine("Average: " + CalculateAverage(numbers));
 			Console.WriteLine("Max: " + CalculateMax(numbers));
 			Console.WriteLine("Min: " + CalculateMin(numbers));
